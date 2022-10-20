@@ -14,8 +14,79 @@
     <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script defer src="/js/manageMembers.js"></script>
 </head>
-<body>
-    <h3 class="text-center">Manage Members</h3>
+<body class="container-xl">
+    <header>
+        <h3 class="text-center"><ion-icon name="people-outline"></ion-icon> Manage Members</h3>
+        <a href="/index.html"><ion-icon name="arrow-back-outline"></ion-icon></a>
+    </header>
+
+    <main>
+        <div class="d-flex justify-content-between">
+            <div class="align-self-end px-1">Search Members</div>
+            <button class="btn btn-primary">New Members</button>
+        </div>
+        <input type="text" class="form-control mt-3" placeholder="Enter id, name, address, contact number etc. io search">
+        <table id="tbl-members" class="table table-hover mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>CONTACT</th>
+                    <th>ADDRESS</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- <tr>
+                    <td>C001</td>
+                    <td>Pala</td>
+                    <td>011-7895622</td>
+                    <td>Galle</td>
+                </tr>
+                <tr>
+                    <td>C002</td>
+                    <td>Lal</td>
+                    <td>071-7895622</td>
+                    <td>Malabe</td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Sena</td>
+                    <td>075-7895622</td>
+                    <td>Kandy</td>
+                </tr> -->
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-center">
+                        No members to display, add a new member first.
+                    </td>
+                </tr>
+            </tfoot>
+           
+        </table>
+
+        <nav id="pagination" class="d-flex justify-content-center d-none">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav> 
+    </main>
+
+    <div id="toast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    
     
 </body>
 </html>
